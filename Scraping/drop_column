@@ -1,0 +1,3 @@
+-- borrar columna id_equipo de la tabla jugadores
+ALTER TABLE jugadores
+DROP COLUMN id_equipo;

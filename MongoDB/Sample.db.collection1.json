@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "62fbbbafcafde69b64571326"
+  },
+  "name": "Amedeo Modigliani",
+  "years": "1884 - 1920",
+  "genre": "Expressionism",
+  "nationality": "Italian"
+},{
+  "_id": {
+    "$oid": "62fbbbafcafde69b64571327"
+  },
+  "name": "Vasiliy Kandinskiy",
+  "years": "1866 - 1944",
+  "genre": "Expressionism,Abstractionism",
+  "nationality": "Russian"
+},{
+  "_id": {
+    "$oid": "62fbbbafcafde69b64571328"
+  },
+  "name": "Diego Rivera",
+  "years": "1886 - 1957",
+  "genre": "Social Realism,Muralism",
+  "nationality": "Mexican"
+},{
+  "_id": {
+    "$oid": "62fbbbafcafde69b64571329"
+  },
+  "name": "Claude Monet",
+  "years": "1840 - 1926",
+  "genre": "Impressionism",
+  "nationality": "French"
+},{
+  "_id": {
+    "$oid": "62fbbbafcafde69b6457132a"
+  },
+  "name": "Rene Magritte",
+  "years": "1898 - 1967",
+  "genre": "Surrealism,Impressionism",
+  "nationality": "Belgian"
+}]

@@ -1,0 +1,4 @@
+-- borrar filas duplicadas
+DELETE
+FROM equipos
+WHERE equipo_id NOT IN (SELECT DISTINCT ON (ciudad, entrenador) equipo_id FROM equipos);

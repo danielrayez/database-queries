@@ -1,0 +1,3 @@
+SELECT nombre,cambio_usd,suma(cambio_usd,600) as cambio_Ago2022
+FROM tipos_cambio
+WHERE nombre = 'Peso Colombiano'

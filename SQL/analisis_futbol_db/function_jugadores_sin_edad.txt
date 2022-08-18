@@ -1,0 +1,35 @@
+CREATE OR REPLACE FUNCTION jugadores_sin_edad()
+RETURNS SETOF jugadores
+LANGUAGE plpgsql
+AS $$
+DECLARE
+ N jugadores%rowtype;
+
+BEGIN
+    TRUNCATE TABLE jugadores_sin_edad;
+	FOR N IN
+ SELECT * FROM jugadores WHERE edad IS NULL
+ LOOP
+ -- can do some processing here
+ RETURN NEXT N; -- return current row of SELECT
+ END LOOP;
+ RETURN;
+
+END;
+$$
+
+
+DROP FUNCTION jugadores_sin_edad()
+DELETE FROM jugadores_sin_edad;
+CREATE OR REPLACE FUNCTION jugadores_sin_edad()
+RETURNS SETOF jugadores
+AS 'SELECT * FROM jugadores WHERE edad IS NULL;'
+LANGUAGE sql;
+
+
+
+
+
+ 		  
+
+	

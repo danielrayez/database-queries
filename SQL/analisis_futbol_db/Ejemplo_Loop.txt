@@ -1,0 +1,14 @@
+DO
+$$
+DECLARE
+J record;
+
+BEGIN
+	FOR J IN SELECT nombre, equipo 
+			 FROM jugadores 
+			 LIMIT 5
+	LOOP 
+	RAISE NOTICE ' su equipo es % y su nombre es %',  J.equipo, J.nombre;
+	END LOOP;
+END;
+$$;

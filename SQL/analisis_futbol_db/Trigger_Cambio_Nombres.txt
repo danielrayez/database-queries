@@ -1,0 +1,30 @@
+-- crearé una tabla que guarde el histórico de cambios (correciones) de nombres hechos a los jugadores
+--TABLA
+DROP TABLE cambios_nombres;
+CREATE TABLE IF NOT EXISTS  cambios_nombres (
+nombre_nuevo TEXT,
+nombre_anterior TEXT,
+fecha DATE
+);
+
+--FUNCIÓN QUE EJECUTARÁ EL TRIGGER
+
+CREATE OR REPLACE FUNCTION cambio_nombre()
+RETURNS TRIGGER
+LANGUAGE 'plpgsql'
+AS $$
+BEGIN
+	IF (TG_OP = 'UPDATE')  THEN
+	INSERT INTO cambios_nombres VALUES (
+			NEW.nombre, OLD.nombre,current_date);
+	END IF;
+	RETURN NULL;
+END;
+$$;
+
+--TRIGGER
+
+CREATE TRIGGER cambio_nombre
+AFTER UPDATE ON jugadores
+FOR EACH ROW
+EXECUTE PROCEDURE cambio_nombre();

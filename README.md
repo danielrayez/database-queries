@@ -1,2 +1,2 @@
 # sql
-here are a some examples of sql queries
+here are a some examples of sql and nosql queries

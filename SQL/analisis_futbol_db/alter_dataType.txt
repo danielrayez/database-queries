@@ -1,0 +1,3 @@
+ALTER TABLE _jugadores 
+ALTER COLUMN altura SET DATA TYPE numeric
+USING altura::numeric;
